@@ -31,6 +31,7 @@ table>tbody>tr:nth-child(4) {
 		$("form input").click(function() {
 			if ($(this).attr("class") == "list") {
 				//location.href = "list.do";
+				
 				$("form").attr("action","list.do");
 				$("form").submit();
 				
@@ -82,7 +83,7 @@ table>tbody>tr:nth-child(4) {
 		<input type="hidden" name="re_step" value="${dto.re_step}" />
 		<input type="hidden" name="ref" value="${dto.ref}" />
 		<input type="hidden" name="re_level" value="${dto.re_level}" />
-		
+		<input type="hidden" name="pageNum" value="${param.page}" />
 		<input type="button" value="목록" class="list" /> 
 		<input type="button" value="답변" class="reply" /> 
 		<input type="button" value="수정" class="update" /> 

@@ -70,7 +70,7 @@ div.pager{
 			}
 			var str =$(this).children().eq(0).text();
 			console.log(str);
-			window.location.href="view.do?num="+str;
+			window.location.href="view.do?num="+str+"&page="+${page};
 		});
 		$("table tr").hover(function(){
 			if($(this).index()==0){
@@ -115,7 +115,7 @@ div.pager{
 					<td>${i.readcount}</td>
 					
 					<td>
-						<c:if test="${i.upload!=null}">
+						<c:if test="${!empty i.upload}">
 							<img src="/jspdemo/boardview/images/save.gif" />
 						</c:if>
 					</td>
